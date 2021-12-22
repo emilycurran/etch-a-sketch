@@ -1,0 +1,27 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 640px;
+    height: 640px;
+}
+
+#grid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.square {
+    display: block;
+    background-color: lightblue;
+    flex-grow: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+}
