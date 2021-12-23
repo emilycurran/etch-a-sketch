@@ -13,6 +13,7 @@ blackButton.addEventListener('click', changeColourModeToBlack)
 initialisePage();
 
 function initialisePage(){
+    //creates first instance of grid with size 16
     var grid= createGrid(16);
     document.getElementById('container').appendChild(grid);
     addGridToHTML(grid);
@@ -68,10 +69,11 @@ function changeColourModeToBlack(){
 }
 
 slider.oninput = function() {
+    //responds to slider input and creates new grid
     var gridSize = this.value;
     newGrid = createGrid(gridSize);
     addGridToHTML(newGrid, gridSize);
-  }
+}
 
 function addGridToHTML(newGrid, gridSize){
     console.log("start of addGridToHTML");
