@@ -5,7 +5,7 @@ html {
 body {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: lightblue;
     width: 640px;
 }
@@ -30,9 +30,11 @@ body {
     justify-content: center;
     width: 100%;
     min-height: 150px;
-    background-color: green;
     align-items: flex-end;
+    font-family: 'Rock 3D';
+    font-size: 70px;
 }
+
 
 .square {
     display: block;
@@ -52,24 +54,21 @@ body {
     align-items: stretch;
     width: 100%;
     height: 100px;
-    background-color: yellow;
 }
 
 .button {
+    background-color: rgb(255, 106, 106);
+    font-family: 'Roboto Mono';
+    font-size: 30px;
+    color: white;
     flex-grow: 1;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
+#reset-button{
+    margin: 10px;
+}
 .slidecontainer {
     width: 100%; /* Width of the outside container */
   }
@@ -105,7 +104,7 @@ body {
   .slider::-moz-range-thumb {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
+    background: #ff6803; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
 

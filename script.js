@@ -1,29 +1,22 @@
 var colourMode = "black";
-var gridSize = 17;
 
 const resetButton = document.getElementById('reset-button');
 const rainbowButton = document.getElementById('rainbow-button');
 const blackButton = document.getElementById('black-button');
 const slider = document.getElementById("myRange");
-const output = document.getElementById("demo");
-
-output.innerHTML = slider.value;
 
 
 resetButton.addEventListener('click', resetGrid);
 rainbowButton.addEventListener('click', changeColourModeToRainbow);
 blackButton.addEventListener('click', changeColourModeToBlack)
 
-newGrid = createGrid(gridSize);
-myGrid = newGrid;
-myGrid.setAttribute('id', 'grid');
-document.getElementById('container').appendChild(myGrid);
-console.log("here");
-console.log(myGrid);
-console.log("here2");
-var test = document.getElementById('grid');
-console.log(test);
-addGridToHTML(newGrid, gridSize);
+initialisePage();
+
+function initialisePage(){
+    var grid= createGrid(16);
+    document.getElementById('container').appendChild(grid);
+    addGridToHTML(grid);
+}
 
 function changeSquareColour(){
     console.log("insider changeSquareColour");
@@ -75,8 +68,7 @@ function changeColourModeToBlack(){
 }
 
 slider.oninput = function() {
-    output.innerHTML = this.value;
-    gridSize = this.value;
+    var gridSize = this.value;
     newGrid = createGrid(gridSize);
     addGridToHTML(newGrid, gridSize);
   }
@@ -87,16 +79,15 @@ function addGridToHTML(newGrid, gridSize){
 
     //remove the old grid from the html page
     var oldGrid = document.getElementById('grid');
-    oldGrid.remove();
-
-    
+    if(oldGrid != null){
+        oldGrid.remove();    
+    }
 
     //finish initialising newGrid
     newGrid.setAttribute('id', 'grid');
     myGrid = newGrid;
     console.log(myGrid);
-
-
+    
     //insert the newly created grid in its place
     var container = document.getElementById('container');
     container.appendChild(newGrid);   

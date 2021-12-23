@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Etch-a-Sketch</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Shizuru&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -10,17 +13,15 @@
     <div id="header">
       <div id="title">Etch-a-Sketch</div>
     </div>
-    <div id="menu">
-      <button  id="reset-button" class="button">reset</button>
-      <button  id="rainbow-button" class="button">rainbow</button>
-      <button  id="black-button" class="button">black</button>
-      
-    </div>
     <div id="container">
+    </div>
+    <div id="menu">
+      <button  id="black-button" class="button">black</button>
+      <button  id="reset-button" class="button">reset</button>
+      <button  id="rainbow-button" class="button">rainbow</button>      
     </div>
     <div class="slidecontainer">
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <div id="demo"></div>
     </div>
     <script src="script.js"></script>
   </body>
